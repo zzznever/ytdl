@@ -4,14 +4,14 @@ $(document).ready(function () {
         console.log(`audio button input: ${ytdl_input}`)
 
         var newObj = {
-           data: ytdl_input
+            data: ytdl_input
         };
 
         var route = '/ytdl';
         $.ajax(route, {
             type: 'POST',
             data: newObj
-        }).done(function (response){
+        }).done(function (response) {
             console.log(`POST: ${JSON.stringify(response)}`);
             $('#results').append(`<li>${response}</li>`);
         })

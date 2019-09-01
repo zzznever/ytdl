@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -16,6 +16,6 @@ app.set('view engine', 'handlebars');
 
 app.use(routing);
 
-app.listen(PORT, function() {
-console.log(`running on ${PORT}`);
+app.listen(PORT, function () {
+    console.log(`running on ${PORT}`);
 });

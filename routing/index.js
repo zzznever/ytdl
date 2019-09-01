@@ -3,12 +3,11 @@ const router = express.Router();
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 
+// router.get('/', function (req, res)
 router.get('/', (req, res) => {
-  // router.get('/', function (req, res)
   res.render('index');
 });
 
-// router.get('/', function (req, res)
 router.get('/ytdl', (req, res) => {
   res.render('ytdl');
 });
